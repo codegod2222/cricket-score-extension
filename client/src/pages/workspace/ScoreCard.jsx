@@ -16,22 +16,23 @@ export default function ScoreCard() {
   const url =
     "https://api.cricapi.com/v1/cricScore?apikey=e83f1f64-aeaf-45d0-9f1f-4b1913679326";
 
-  const [Match, setMatch] = useState([]);
+  const [Match, setMatch] = useState(undefined);
 
   useEffect(() => {
-    // axios
-    //   .get(url, {
-    //     AccessControlAllowMethods: "GET, DELETE, HEAD, OPTIONS",
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //     method: "GET",
-    //     AccessControlAllowOrigin: "*",
-    //     headers: { "Content-Type": "application/json" },
-    //   })
-    //   .then((response) => {
-    //     setMatch(response.data.data);
-    //   });
+    axios
+      .get(url, {
+        AccessControlAllowMethods: "GET, DELETE, HEAD, OPTIONS",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        method: "GET",
+        AccessControlAllowOrigin: "*",
+        headers: { "Content-Type": "application/json" },
+      })
+      .then((response) => {
+        setMatch(response.data.data);
+        // setMatch([1,2,3,4,5,6]);
+      });
   }, []);
 
   console.log(Match);
@@ -45,8 +46,9 @@ export default function ScoreCard() {
       }
     });
   };
+  console.log(typeof Match);
   console.log(Match);
-  if (Match.length !== 0) {
+  if (Match !== undefined) {
     //   filter to get live matches from all matches
     console.log("hi");
     liveMatch = getFilteredItem(Match).reverse();
@@ -55,7 +57,7 @@ export default function ScoreCard() {
     liveMatch = getFilteredItem(data.data).reverse();
   }
 
-  console.log(liveMatch);
+  console.log(liveMatch[0]);
 
   const t1img = liveMatch[0].t1img;
   const t2img = liveMatch[0].t2img;

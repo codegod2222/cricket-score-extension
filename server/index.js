@@ -55,3 +55,5 @@ app.use(express.json());
 // app.use("/transactions", require("./Routes/Transactions"));
 // app.use("/transactions", require("./Routes/Transactions"));
 // app.use("/wallet", require("./Routes/Wallet"));
+
+app.use("/storedata", require("./Routes/StoreData.js"));

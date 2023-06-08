@@ -8,7 +8,9 @@ import data from "../Data/Score.json";
 
 export default function Intro() {
   const url =
-    "https://api.cricapi.com/v1/cricScore?apikey=049fa66d-c03b-4270-84c5-9169bdfda9c5";
+    "https://api.cricapi.com/v1/cricScore?apikey=e83f1f64-aeaf-45d0-9f1f-4b1913679326";
+  // "https://api.cricapi.com/v1/cricScore?apikey=049fa66d-c03b-4270-84c5-9169bdfda9c5";
+  // "https://api.cricapi.com/v1/cricScore?apikey=e83f1f64-aeaf-45d0-9f1f-4b1913679326";
 
   const [Match, setMatch] = useState([]);
 
@@ -34,19 +36,19 @@ export default function Intro() {
   var liveMatch;
 
   const getFilteredItem = (item) => {
-    return (item.filter((val) => {
-      if (val.ms === "live" ) {
+    return item.filter((val) => {
+      if (val.ms === "live") {
         return true;
       }
-    }));
+    });
   };
 
   if (Match) {
     //   filter to get live matches from all matches
-    console.log("hi")
+    console.log("hi");
     liveMatch = getFilteredItem(Match);
   } else {
-    console.log("hi*/*9846")
+    console.log("hi*/*9846");
     liveMatch = getFilteredItem(data.data);
   }
 
