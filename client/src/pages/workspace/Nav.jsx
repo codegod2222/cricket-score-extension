@@ -26,9 +26,9 @@ export default function Nav() {
             </div>
             <div className="flex justify-between ">
               <li>
-                <NavLink className="m-1" to="/favourite">
+                {/* <NavLink className="m-1" to="/favourite">
                   Favourite
-                </NavLink>
+                </NavLink> */}
               </li>
             </div>
           </ul>

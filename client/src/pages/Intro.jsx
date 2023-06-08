@@ -27,12 +27,41 @@ export default function Intro() {
         headers: { "Content-Type": "application/json" },
       })
       .then((response) => {
+        console.log(response.data.data);
         setMatch(response.data.data);
+        if (response.data.data !== undefined) {
+          axios
+            .post("http://localhost:3001/storedata/data", {
+              data: response.data.data,
+            })
+            .then((res) => console.log("data send", res));
+        } else {
+          console.log(
+            "j*******************************hfhbsabkbalk*******************"
+          );
+          axios
+            .post("http://localhost:3001/storedata/data", {
+              data: data.data,
+            })
+            .then((res) => console.log("data send", res));
+        }
       });
   }, []);
 
+  useEffect(() => {
+    axios.post("http://localhost:3001/getdata/data", {}).then((res) =>
+      // console.log("data send**************************************")
+      // console.log(res.data[0].data);
+      setstoreddata(res.data[0].data)
+    );
+  }, []);
+
+  const [storeddata, setstoreddata] = useState([]);
   console.log(Match);
-  console.log(data.data);
+  console.log(
+    "*************************************************************************************"
+  );
+  console.log(storeddata);
   var liveMatch;
 
   const getFilteredItem = (item) => {
@@ -42,16 +71,20 @@ export default function Intro() {
       }
     });
   };
+  console.log(typeof Match);
+  console.log(Match);
+  console.log(storeddata);
 
-  if (Match) {
+  if (Match !== undefined) {
     //   filter to get live matches from all matches
     console.log("hi");
     liveMatch = getFilteredItem(Match);
   } else {
     console.log("hi*/*9846");
-    liveMatch = getFilteredItem(data.data);
+    liveMatch = getFilteredItem(storeddata);
   }
 
+  console.log("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
   console.log(liveMatch);
 
   //filter to get live matches from all matches

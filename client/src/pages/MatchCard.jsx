@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 
 export default function MatchCard({ data }) {
   console.log(data);
+  const matchinfo = data;
+  console.log(matchinfo);
   const t1img = data.t1img;
   const t2img = data.t2img;
   var t1 = data.t1.slice(data.t1.indexOf("[") + 1, data.t1.indexOf("]"));
@@ -10,12 +12,7 @@ export default function MatchCard({ data }) {
 
   return (
     <div className="w-[150px] p-2 h-[103px] m-1 mt-5 ml-3 bg-white rounded-md">
-      <Link
-        to={{
-          pathname: "/matchscore",
-        }}
-        state={`${data.id}`}
-      >
+      <div>
         <div>
           <div className="flex justify-between">
             <div className="text-[9.5px] text-left font-medium text-[#ff2222]">
@@ -56,7 +53,7 @@ export default function MatchCard({ data }) {
         <div className="text-[9.5px] font-medium mt-[10px] text-[#8c8c8c] ">
           {data.status}
         </div>
-      </Link>
+      </div>
     </div>
   );
 }

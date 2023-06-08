@@ -10,13 +10,7 @@ export default function MatchTypecard({ data }) {
 
   return (
     <div className="w-[133px] p-2 h-[90px] m-1 mt-5  bg-white rounded-md ">
-      <Link
-        to={{
-          pathname: "/matchscore",
-         
-        }}
-        state={`${data.id}`}
-      >
+      <div>
         <div>
           <div className="flex justify-between m-1">
             <div className="flex justify-between">
@@ -48,7 +42,7 @@ export default function MatchTypecard({ data }) {
         <div className="text-[9.5px] font-medium mt-[10px] text-[#8c8c8c] ">
           {data.status}
         </div>
-      </Link>
+      </div>
     </div>
   );
 }

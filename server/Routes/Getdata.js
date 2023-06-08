@@ -3,14 +3,13 @@ const router = express.Router();
 const Data = require("../Models/Data");
 
 router.post("/data", async (req, res) => {
-  console.log("data");
-  const data = req.body.data;
-  console.log(data);
   try {
-    await Data.deleteMany();
-    await Data.create({
-      data: data,
-    }).then(console.log("data inserted"));
+    await Data.find()
+      .then(async (data) => {
+        console.log(data);
+        res.send(data);
+      })
+      .then(console.log("data sent"));
   } catch (error) {
     console.log(error);
   }
