@@ -72,10 +72,11 @@ export default function ScoreCard() {
   );
   console.log(t1);
   console.log(t2);
+  console.log(liveMatch[0].t2s.length);
 
   return (
     <>
-      <div>
+      <div className="bg-white p-3 mt-6 rounded-md m-3">
         <div className="font-bold mt-2">
           {t1} vs {t2}
         </div>
@@ -95,12 +96,34 @@ export default function ScoreCard() {
                   {t11}
                 </div>
               </div>
-              <div className="text-[15px] mt-5 font-medium text-[#404040] ">
-              {liveMatch[0].t1s}
-            </div>
+              <div className="text-[15px] w-[60px] mt-5 font-medium text-[#404040] ">
+                {liveMatch[0].t1s}
+              </div>
             </div>
           </div>
-          <div className="w-[40%] border-2 border-red-300"></div>
+          <div className="w-[40%] ">
+            <div className="flex justify-end ">
+              <div className="text-[15px] mt-5 w-[60px] font-medium text-[#404040] ">
+                {liveMatch[0].t2s.length === 0 ? (
+                  <div>-</div>
+                ) : (
+                  <div>{liveMatch[0].t2s}</div>
+                )}
+              </div>
+              <div className=" mt-5">
+                <div
+                  className="w-[40px] h-[30px] bg-cover bg-center mr-[2px]"
+                  style={{ backgroundImage: `url(${t2img})` }}
+                ></div>
+                <div className="text-[12px] text-left ml-2 font-semibold">
+                  {t22}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="text-[15px] font-medium mt-8 text-[#4a4a4a] ">
+          {liveMatch[0].status}
         </div>
       </div>
     </>
