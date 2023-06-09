@@ -5,6 +5,10 @@ import { Navigate, useNavigate } from "react-router-dom";
 export default function Title() {
   const history = useNavigate();
 
+  function refreshPage() {
+    window.location.reload(false);
+  }
+
   const handleback = () => {
     history(-1);
   };
@@ -22,6 +26,7 @@ export default function Title() {
         >
           <FiChevronLeft />
         </div>
+        <button onClick={refreshPage}  className="absolute top-[9px] text-[9px] left-[260px] text-white">Reload</button>
       </div>
     </>
   );

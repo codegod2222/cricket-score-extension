@@ -81,7 +81,7 @@ export default function Intro() {
     liveMatch = getFilteredItem(Match);
   } else {
     console.log("hi*/*9846");
-    liveMatch = getFilteredItem(storeddata);
+    liveMatch = getFilteredItem(data.data);
   }
 
   console.log("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");

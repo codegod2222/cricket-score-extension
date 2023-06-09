@@ -12,7 +12,8 @@ export default function MatchCard({ data }) {
 
   return (
     <div className="w-[150px] p-2 h-[103px] m-1 mt-5 ml-3 bg-white rounded-md">
-      <div>
+      <Link to="/matchscore"
+      state={{ id: data.id }}>
         <div>
           <div className="flex justify-between">
             <div className="text-[9.5px] text-left font-medium text-[#ff2222]">
@@ -53,7 +54,7 @@ export default function MatchCard({ data }) {
         <div className="text-[9.5px] font-medium mt-[10px] text-[#8c8c8c] ">
           {data.status}
         </div>
-      </div>
+      </Link>
     </div>
   );
 }
