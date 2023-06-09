@@ -11,7 +11,7 @@ Note: This extension relies on an internet connection to fetch live data. It is 
 
 The Build Folder:
 
-Locate the build folder of your Chrome extension from the this file project. 
+Locate the build folder of Chrome extension from this project. 
 This folder typically contains all the necessary files and assets required for your extension to function. Select all the files and folders within the build folder. Download this folder to upload it later.
 
 
