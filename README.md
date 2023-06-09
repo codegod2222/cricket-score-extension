@@ -12,10 +12,14 @@ Note: This extension relies on an internet connection to fetch live data. It is 
 The Build Folder:
 
 Locate the build folder of your Chrome extension from the this file project. 
-This folder typically contains all the necessary files and assets required for your extension to function. Select all the files and folders within the build folder.
+This folder typically contains all the necessary files and assets required for your extension to function. Select all the files and folders within the build folder. Download this folder to upload it later.
 
 
 Upload the Extension Package:
 
 open Manage extension to turn on developer mode.
 Click on Load unpacked to upload Build folder for this extension.
+
+
+## Overview
+![Screenshot 2023-06-09 134114](https://github.com/jynt1401/Cric_chrome_extension/assets/100084399/5a1c8392-380b-4098-ba33-b8d20023bce6)
