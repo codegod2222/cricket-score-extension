@@ -21,6 +21,25 @@ open Manage extension to turn on developer mode.
 Click on Load unpacked to upload Build folder for this extension.
 
 
+## If get cors error
+
+change the origin from localhost to your extension link
+
+```javascript
+
+
+// server/index.js 
+
+app.use(
+  cors({
+    // origin: "chrome://extensions/?errors=kekciafpgdefoippkloamgmcejkbbbbj",
+    origin: "http://localhost:3000",
+    credentials: true,
+  })
+);
+```
+
+
 ## Overview
 ![Screenshot 2023-06-09 134114](https://github.com/jynt1401/Cric_chrome_extension/assets/100084399/5a1c8392-380b-4098-ba33-b8d20023bce6)
 ![Screenshot 2023-06-09 134133](https://github.com/jynt1401/Cric_chrome_extension/assets/100084399/fdaba31b-7a5f-41a1-9a5d-85200cffd831)
