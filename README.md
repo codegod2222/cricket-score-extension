@@ -7,9 +7,9 @@ With our user-friendly interface, you can easily access the live scores of ongoi
 Note: This extension relies on an internet connection to fetch live data. It is intended for informational purposes only and does not offer live streaming of matches.
 
 
-## To upload the build folder of a Chrome extension, you'll need to follow these steps:
+## How to run Chrome extension
 
-####Compress the Build Folder:
+Compress the Build Folder:
 
 Locate the build folder of your Chrome extension on your local machine. This folder typically contains all the necessary files and assets required for your extension to function.
 Select all the files and folders within the build folder.
