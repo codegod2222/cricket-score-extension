@@ -9,8 +9,13 @@ Note: This extension relies on an internet connection to fetch live data. It is 
 
 ## How to run Chrome extension
 
-Compress the Build Folder:
+The Build Folder:
 
-Locate the build folder of your Chrome extension on your local machine. This folder typically contains all the necessary files and assets required for your extension to function.
-Select all the files and folders within the build folder.
-Right-click on the selection and choose the option to compress or zip the files. This action will create a compressed archive file (e.g., a .zip file) containing your extension.
+Locate the build folder of your Chrome extension from the this file project. 
+This folder typically contains all the necessary files and assets required for your extension to function. Select all the files and folders within the build folder.
+
+
+Upload the Extension Package:
+
+open Manage extension to turn on developer mode.
+Click on Load unpacked to upload Build folder for this extension.
