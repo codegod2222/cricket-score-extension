@@ -39,7 +39,11 @@ app.use(
 );
 ```
 
-
 ## Overview
 ![Screenshot 2023-06-09 134114](https://github.com/jynt1401/Cric_chrome_extension/assets/100084399/5a1c8392-380b-4098-ba33-b8d20023bce6)
 ![Screenshot 2023-06-09 134133](https://github.com/jynt1401/Cric_chrome_extension/assets/100084399/fdaba31b-7a5f-41a1-9a5d-85200cffd831)
+
+https://github.com/jynt1401/Cric_chrome_extension/assets/100084399/28b07ed5-8e2e-4d8d-89fb-821279ac556c
+
+
+
